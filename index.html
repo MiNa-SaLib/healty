@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <!-- WoWJS -->
+    <link rel="stylesheet" href="cssStyle/animate.css" />
   </head>
   <body>
     <!-- start nav bar -->
@@ -26,11 +28,11 @@
       <nav>
         <a class="logo" href="#">Healthy</a>
         <ul>
-          <li><a class="linkInNav" href="#">Home </a></li>
-          <li><a class="linkInNav" href="#">About </a></li>
-          <li><a class="linkInNav" href="#">Service </a></li>
-          <li><a class="linkInNav" href="#">Menu </a></li>
-          <li><a class="linkInNav" href="#">Contact us</a></li>
+          <li><a class="linkInNav" href="#home">Home </a></li>
+          <li><a class="linkInNav" href="#about">About </a></li>
+          <li><a class="linkInNav" href="#sercices">Service </a></li>
+          <li><a class="linkInNav" href="#menu">Menu </a></li>
+          <li><a class="linkInNav" href="#contact">Contact us</a></li>
         </ul>
         <i id="menubar" class="fa-solid fa-bars-staggered"></i>
         <!-- dark mood -->
@@ -40,12 +42,12 @@
     <!-- end nav bar -->
     <!-- start home -->
     <div class="container">
-      <div class="home" id="home">
+      <div class="home wow slideInLeft" data-wow-duration="1s" id="home">
         <div class="textInHome">
           <h1>healthy food</h1>
           <p>Try the best food of</p>
           <p>the week.</p>
-          <a class="viewmenu" href="#">View Menu</a>
+          <a class="viewmenu" href="#menu">View Menu</a>
         </div>
         <div class="imagInHome">
           <img src="images/Dish-PNG.png" alt="" />
@@ -58,27 +60,29 @@
     <!-- end home -->
     <!-- start about -->
     <div class="container">
-      <h1 class="aboutTitel">About</h1>
+      <h1 class="aboutTitel wow bounceInUp">About</h1>
       <div class="about" id="about">
-        <div class="imagInAbout">
+        <div class="imagInAbout wow bounceInUp">
           <img src="images/about.jpg" alt="" />
         </div>
-        <div class="textInAbout">
+        <div class="textInAbout wow bounceInUp">
           <h2>We cook the best healthy food</h2>
           <p>
             We cook the best food in the entire city, with excellent customer
             service, the best meals and at the best price, visit us.
           </p>
-          <a href="#">Explore history</a>
+          <a class="wow bounceInUp" data-wow-duration="1s" href="#"
+            >Explore history</a
+          >
         </div>
       </div>
     </div>
     <!-- end about -->
     <!-- start sercices -->
     <div class="container">
-      <h1 class="servicesTitel">Our amazing services</h1>
-      <div class="sercices" id="sercices">
-        <div class="one">
+      <h1 class="servicesTitel wow bounceInUp">Our amazing services</h1>
+      <div class="sercices wow bounceInUp" id="sercices">
+        <div class="one wow bounceInUp">
           <img
             src="images/services/undraw_eating_together_re_ux62.svg"
             alt=""
@@ -88,14 +92,14 @@
             the best and delicious food in the city.
           </p>
         </div>
-        <div class="two">
+        <div class="two wow bounceInUp">
           <img src="images/services/undraw_breakfast_psiw.svg" alt="" />
           <p>
             We offer our clients excellent quality services for many years, with
             the best and delicious food in the city.
           </p>
         </div>
-        <div class="three">
+        <div class="three wow bounceInUp">
           <img src="images/services/undraw_drone_delivery_re_in95.svg" alt="" />
           <p>
             We offer our clients excellent quality services for many years, with
@@ -108,10 +112,10 @@
     <!-- start menu  -->
     <!-- Slider main container -->
 
-    <div class="swiper">
-      <h1>Menu of the week</h1>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
+    <div class="swiper" id="menu">
+      <h1 class="wow bounceInUp">Menu of the week</h1>
+      <div class="swiper-wrapper wow bounceInUp">
+        <div class="swiper-slide wow bounceInUp">
           <div>
             <img
               src="images/menue/food-grass-fed-beef-foodservice-products-grass-run-farms-4.png"
@@ -125,7 +129,7 @@
             </p>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide wow bounceInUp">
           <div>
             <img
               src="images/menue/food-grass-fed-beef-foodservice-products-grass-run-farms-4.png"
@@ -139,7 +143,7 @@
             </p>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide wow bounceInUp">
           <div>
             <img
               src="images/menue/food-grass-fed-beef-foodservice-products-grass-run-farms-4.png"
@@ -153,7 +157,7 @@
             </p>
           </div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide wow bounceInUp">
           <div>
             <img
               src="images/menue/food-grass-fed-beef-foodservice-products-grass-run-farms-4.png"
@@ -176,16 +180,16 @@
     <!-- end menu  -->
     <!-- start contact  -->
     <div class="container">
-      <div class="contact">
-        <div class="alltxt">
+      <div class="contact" id="contact">
+        <div class="alltxt wow slideInLeft">
           <p>Let's talk</p>
           <h1>Contact us</h1>
-          <p class="txt">
+          <p class="txt wow slideInLeft">
             If you want to reserve a table in our restaurant, contact us and we
             will attend you quickly, with our 24/7 chat service.
           </p>
         </div>
-        <a href="#" class="contactlink">Contact us now</a>
+        <a href="#" class="wow slideInLeft contactlink">Contact us now</a>
       </div>
     </div>
     <!-- end contact  -->
@@ -193,31 +197,37 @@
     <div class="container">
       <div class="contactDetals">
         <div class="logoIncontact">
-          <h1>healthy Food</h1>
-          <p>Restaurant</p>
-          <a href="#" class="face"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+          <h1 class="wow slideInLeft">healthy Food</h1>
+          <p class="wow slideInLeft">Restaurant</p>
+          <a href="#" class="wow slideInLeft face"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="wow slideInLeft twitter"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" class="wow slideInLeft linkedin"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
         </div>
         <div class="serIncontact">
-          <h2>Services</h2>
-          <a href="#">Delivery</a>
-          <a href="#">Pricing</a>
-          <a href="#">Fast food</a>
-          <a href="#">Reserve your spot</a>
+          <h2 class="wow slideInLeft">Services</h2>
+          <a class="wow slideInLeft" href="#">Delivery</a>
+          <a class="wow slideInLeft" href="#">Pricing</a>
+          <a class="wow slideInLeft" href="#">Fast food</a>
+          <a class="wow slideInLeft" href="#">Reserve your spot</a>
         </div>
         <div class="infoIncontact">
-          <h2>Information</h2>
-          <a href="#">Event</a>
-          <a href="#">Contact us</a>
-          <a href="#">Privacy policy</a>
-          <a href="#">Terms of services</a>
+          <h2 class="wow slideInLeft">Information</h2>
+          <a class="wow slideInLeft" href="#">Event</a>
+          <a class="wow slideInLeft" href="#">Contact us</a>
+          <a class="wow slideInLeft" href="#">Privacy policy</a>
+          <a class="wow slideInLeft" href="#">Terms of services</a>
         </div>
         <div class="aboume">
-          <h2>Adress</h2>
-          <p>MiNa SaLib</p>
-          <p>+02 0102 390 2895</p>
-          <p>Egypt, Al-Miniya</p>
+          <h2 class="wow slideInLeft">Adress</h2>
+          <p class="wow slideInLeft">MiNa SaLib</p>
+          <p class="wow slideInLeft">+02 0102 390 2895</p>
+          <p class="wow slideInLeft">Egypt, Al-Miniya</p>
         </div>
       </div>
     </div>
@@ -226,6 +236,7 @@
       <p>&copy; 2022 <span>MiNa SaLib</span>. All rights reserved</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
