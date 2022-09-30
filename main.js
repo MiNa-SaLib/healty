@@ -8,6 +8,8 @@ document.addEventListener("click", function (e) {
   } else listInNav.classList.remove("CustomTopToMenu");
 });
 //=================================
+
+//=================================
 ////show to top button
 let toTop = document.querySelector(".toTop");
 window.onscroll = function () {
@@ -18,31 +20,72 @@ window.onscroll = function () {
     toTop.style.display = "none";
   }
 };
-
 //=================================
+
 //=================================
 //dark mood
 let dark = document.getElementById("dark");
 let navColor = document.querySelectorAll(".linkInNav");
 let logoIncontact = document.querySelectorAll(".contactDetals a");
 let swiperSlideDiv = document.querySelectorAll(".swiper-slide div ");
-// console.log(navColor);
+
+///////======================================
 dark.addEventListener("click", function () {
+  if (!document.body.hasAttributes()) {
+    window.localStorage.setItem("dark", "darkMood");
+    window.localStorage.getItem("dark");
+    document.body.classList.toggle("darkMood");
+    navColor.forEach(function (e) {
+      e.classList.toggle("darkMood");
+    });
+    logoIncontact.forEach(function (e) {
+      e.classList.toggle("darkMood");
+    });
+    swiperSlideDiv.forEach(function (e) {
+      e.classList.toggle("darkMoodColorBlack");
+    });
+    swiperSlideDiv.classList.toggle("darkMoodColorBlack");
+  } else {
+    window.localStorage.clear();
+    document.body.classList.toggle("darkMood");
+    navColor.forEach(function (e) {
+      e.classList.toggle("darkMood");
+    });
+    logoIncontact.forEach(function (e) {
+      e.classList.toggle("darkMood");
+    });
+    swiperSlideDiv.forEach(function (e) {
+      e.classList.toggle("darkMoodColorBlack");
+    });
+  }
+});
+
+if (window.localStorage.getItem("dark")) {
   document.body.classList.toggle("darkMood");
   navColor.forEach(function (e) {
     e.classList.toggle("darkMood");
-    console.log(e);
   });
   logoIncontact.forEach(function (e) {
-    console.log(e);
     e.classList.toggle("darkMood");
   });
   swiperSlideDiv.forEach(function (e) {
-    console.log(e);
     e.classList.toggle("darkMoodColorBlack");
   });
-  swiperSlideDiv.classList.toggle("darkMoodColorBlack");
-});
+}
+///=================================================
+// dark.addEventListener("click", function () {
+//   document.body.classList.toggle("darkMood");
+//   navColor.forEach(function (e) {
+//     e.classList.toggle("darkMood");
+//   });
+//   logoIncontact.forEach(function (e) {
+//     e.classList.toggle("darkMood");
+//   });
+//   swiperSlideDiv.forEach(function (e) {
+//     e.classList.toggle("darkMoodColorBlack");
+//   });
+//   swiperSlideDiv.classList.toggle("darkMoodColorBlack");
+// });
 
 //=================================
 
